@@ -1,0 +1,24 @@
+root:iitt321
+ryan:iitt321
+sql
+
+django
+ryan:iitt321
+
+需要进入下方目录再运行命令，然后输入密码来连接
+D:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p
+root:iitt321
+
+CREATE DATABASE my_new_database;
+创建数据库
+
+USE my_new_database;
+切换到此数据库
+
+DROP DATABASE my_new_database;
+删除数据库
+
+
+
+pip install mysqlclient
+需要安装驱动

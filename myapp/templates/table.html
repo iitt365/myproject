@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %} <!-- 加载静态文件标签库 -->
+    <title>Table Page</title>
+</head>
+<body>
+    <h1>Data Table</h1>
+
+    <!-- 插入所有图片 -->
+    <div>
+        {% for img_file in images %}
+            <img src="{% static 'myapp/images/'|add:img_file %}" alt="Image" style="width: 200px; height: auto;">
+        {% endfor %}
+    </div>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Value</th>
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
